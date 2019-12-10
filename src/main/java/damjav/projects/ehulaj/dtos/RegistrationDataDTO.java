@@ -16,5 +16,5 @@ public class RegistrationDataDTO {
     @NotBlank @Size(min = 4, max = 12)
     private String rePassword;
     @NotNull @AssertTrue
-    private Boolean termsAcceptace;
+    private Boolean termsAcceptance;
 }
