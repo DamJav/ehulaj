@@ -6,7 +6,9 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter @Setter
@@ -29,4 +31,6 @@ public class User {
     private Boolean active = Boolean.FALSE;
     @ManyToMany
     private Set<Role> roles = new HashSet<>();
+    @OneToMany (mappedBy = "user")
+    private List<Advertisement> advertisements = new ArrayList<>();
 }
