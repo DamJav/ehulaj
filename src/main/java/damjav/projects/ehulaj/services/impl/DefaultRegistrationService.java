@@ -35,7 +35,5 @@ public class DefaultRegistrationService implements RegistrationService {
         Role roleUser = roleRepository.getByName("ROLE_USER");
         user.getRoles().add(roleUser);
         userRepository.save(user);
-
-
     }
 }
