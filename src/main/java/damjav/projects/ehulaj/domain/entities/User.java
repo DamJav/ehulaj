@@ -33,4 +33,6 @@ public class User {
     private Set<Role> roles = new HashSet<>();
     @OneToMany (mappedBy = "user")
     private List<Advertisement> advertisements = new ArrayList<>();
+    @OneToMany (mappedBy = "user")
+    private List<Problem> problems = new ArrayList<>();
 }

@@ -28,16 +28,20 @@
 <jsp:include page="media/header.jsp"/>
 <section class="hero is-bold is-medium">
     <div class="container">
-        <div class="hero-body">
+        <div class="hero-body" style="text-align: center;">
             <h1 class="title">
-                Spring Transitions
+                e-Hulaj
             </h1>
             <h2 class="subtitle">
-                Witaj w projekcie <strong>Spring Transitions</strong>.
-                <br/>Znajdziesz tutaj mnóstwo przykładów w jaki sposób mogą być wdrażane kolejne
-                rozwinięcia aplikacji opartej na
-                frameworku Spring i Spring Boot
+                Witaj w projekcie <strong>e-Hulaj</strong>.
+                <br/>Znajdziesz tutaj ogłoszenia dotyczące elektrycznych hulajnóg.<br/>
+                Aby dodać ogłoszenie musisz utworzyć konto, a następnie się zalogować.
             </h2>
+            <div class="container" style="text-align: center;">
+                <a class="button is-success" href="/advertisements/showAll">
+                    <strong>Zobacz ogłoszenia</strong>
+                </a>
+            </div>
 
         </div>
     </div>
