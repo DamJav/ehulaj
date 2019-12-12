@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 @Data
 public class RegistrationDataDTO {
 
-    @NotBlank @Size(min=3, max=12)
+    @NotBlank @Size(min=4, max=12)
     private String username;
     @NotBlank @Email
     private String email;
