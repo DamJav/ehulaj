@@ -11,7 +11,6 @@
                         Strona główna
                     </a>
                     <%-- Tutaj pozostałe linki, które chcemy mieć widoczne --%>
-                    <sec:authorize access="hasRole('USER')">
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
                             Więcej
@@ -27,7 +26,6 @@
                             <%-- Tutaj kolejne linki w menu dodatkowym --%>
                         </div>
                     </div>
-                    </sec:authorize>
                 </div>
 
                 <div class="navbar=end">
