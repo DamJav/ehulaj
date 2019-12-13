@@ -32,7 +32,7 @@ public class StarterDataCreator implements ApplicationRunner {
         Role adminRole = new Role();
         adminRole.setName("ROLE_ADMIN");
         roleRepository.save(adminRole);
-        
+
         userRepository.createAdmin();
         userRepository.makeAdminAdmin();
     }
