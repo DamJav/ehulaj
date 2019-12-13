@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 @Controller
@@ -41,9 +43,10 @@ public class AccountController {
     }
 
     @PostMapping("/passwordChange")
-    public String processPasswordChange(String password, Principal principal){
+    public String processPasswordChange(String password, Principal principal, HttpServletRequest request) throws ServletException {
         String username = principal.getName();
         userRepository.changePasswordByUsername(username, passwordEncoder.encode(password));
+        request.logout();
         return "redirect:/login";
     }
 
@@ -53,12 +56,13 @@ public class AccountController {
     }
 
     @GetMapping("/deleteAccountUser")
-    public String processDeleteAccount(Principal principal){
+    public String processDeleteAccount(HttpServletRequest request, Principal principal) throws ServletException {
         String username = principal.getName();
         Long userId = userRepository.findIdByUsername(username);
         advertisementRepository.deleteAllUserAdvertisementsByUserId(userId);
         problemRepository.deleteAllUserProblemsByUserId(userId);
         userRepository.deleteById(userId);
+        request.logout();
         return "redirect:/login";
     }
 
