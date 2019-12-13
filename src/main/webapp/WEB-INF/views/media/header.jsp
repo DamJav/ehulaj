@@ -17,7 +17,7 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="more/contact">
+                            <a class="navbar-item" href="/more/contact">
                                 Kontakt
                             </a>
                             <a class="navbar-item" href="/problem/add">
