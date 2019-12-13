@@ -35,5 +35,7 @@ public class StarterDataCreator implements ApplicationRunner {
 
         userRepository.createAdmin();
         userRepository.makeAdminAdmin();
+        userRepository.createUser();
+        userRepository.makeUserUser();
     }
 }
