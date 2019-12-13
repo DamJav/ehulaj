@@ -33,4 +33,17 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT id FROM users WHERE username = ?", nativeQuery = true)
             Long findIdByUsername(String username);
 
+    @Transactional
+    @Modifying
+    @Query(value = "insert into users(email, password, username, active) values\n" +
+            "('dga1999@wp.pl', '{noop}admin', 'admin', true);", nativeQuery = true)
+    void createAdmin();
+
+    @Transactional
+    @Modifying
+    @Query(value = "insert into users_roles(user_id, roles_id) VALUES\n" +
+            "(SELECT id FROM users WHERE username = 'admin',2);", nativeQuery = true)
+    void makeAdminAdmin();
+
+
 }

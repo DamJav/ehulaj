@@ -3,6 +3,7 @@ package damjav.projects.ehulaj;
 
 import damjav.projects.ehulaj.domain.entities.Role;
 import damjav.projects.ehulaj.domain.repositories.RoleRepository;
+import damjav.projects.ehulaj.domain.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class StarterDataCreator implements ApplicationRunner {
 
     private final RoleRepository roleRepository;
+    private final UserRepository userRepository;
 
     @Override @Transactional
     public void run(ApplicationArguments args) throws Exception {
@@ -27,9 +29,11 @@ public class StarterDataCreator implements ApplicationRunner {
         Role userRole = new Role();
         userRole.setName("ROLE_USER");
         roleRepository.save(userRole);
-
         Role adminRole = new Role();
         adminRole.setName("ROLE_ADMIN");
         roleRepository.save(adminRole);
+        
+        userRepository.createAdmin();
+        userRepository.makeAdminAdmin();
     }
 }
