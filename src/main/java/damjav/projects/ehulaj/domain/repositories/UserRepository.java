@@ -45,6 +45,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
             "(SELECT id FROM users WHERE username = 'admin',2);", nativeQuery = true)
     void makeAdminAdmin();
 
+
     @Transactional
     @Modifying
     @Query(value = "insert into users(email, password, username, active) values\n" +

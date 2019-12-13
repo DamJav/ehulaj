@@ -35,10 +35,10 @@
             <h2 class="subtitle">
                 Jeżeli masz pytania, skontaktuj się z nami:
             </h2>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/" target="_blank">
                 <img src="/media/fb.png" width="30px" height="30px">
             </a><hr/>
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/" target="_blank">
                 <img src="/media/ig.jpg" width="40px" height="40px">
             </a>
             <hr/>
