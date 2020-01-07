@@ -1,10 +1,18 @@
 # ehulaj
 
 
-IT'S MY FIRST PROJECT.
-HERE IS LINK, WHERE YOU CAN TEST MY APLICATION:
+
+To jest mój pierwszy samodzielny projekt.
+Ma być to aplikacja z ogłoszeniami
+Można ją przetestować:
 http://e-hulaj.herokuapp.com/
 
-DEFAULT THERE ARE 2 USERS:
+Domyślnie są 2 konta: 
 1: admin, admin
 2: user, user
+
+Funkcjonalności to m.in :
+-rejestracja, logowanie
+-dodawanie, usuwanie, edycja ogłoszeń
+-zmiana hasła
+-usuwanie, blokowanie użytkowników przez administratora
